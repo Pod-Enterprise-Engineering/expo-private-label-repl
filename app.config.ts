@@ -1,4 +1,5 @@
 import { ConfigContext, ExpoConfig } from "expo/config";
+import merge from "lodash.merge";
 
 const configs: Record<string, ConfigContext["config"]> = {
   first: {
@@ -10,7 +11,8 @@ const configs: Record<string, ConfigContext["config"]> = {
     name: "second-expo-private-label-repl",
     ios: {
       supportsTablet: true,
-      bundleIdentifier: "com.pod-enterprise-engineering.second-expo-private-label-repl",
+      bundleIdentifier:
+        "com.pod-enterprise-engineering.second-expo-private-label-repl",
     },
   },
 };
@@ -21,12 +23,12 @@ export default function ({ config }: ConfigContext): ExpoConfig {
   const overrides =
     privateLabelSchema in configs ? configs[privateLabelSchema] : {};
 
-  const mergedConfig = {
-    ...config, // Base config is loaded from app.json and package.json
-    slug: "expo-private-label-repl",
-    name: "expo-private-label-repl",
-    ...overrides,
-  };
+  // Use lodash.merge to recursively merge configurations, allowing for shallow overrides
+  const mergedConfig = merge(
+    config, // Base config is loaded from app.json and package.json
+    { slug: "expo-private-label-repl", name: "expo-private-label-repl" },
+    overrides
+  );
 
   return mergedConfig;
 }
