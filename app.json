@@ -10,7 +10,7 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.ajchili.expo-private-label-repl"
+      "bundleIdentifier": "com.pod-enterprise-engineering.expo-private-label-repl"
     },
     "android": {
       "adaptiveIcon": {
@@ -21,7 +21,7 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.ajchili.expoprivatelabelrepl"
+      "package": "com.pod-enterprise-engineering.expoprivatelabelrepl"
     },
     "web": {
       "output": "static",
