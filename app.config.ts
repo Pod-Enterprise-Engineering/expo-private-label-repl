@@ -18,7 +18,7 @@ const configs: Record<string, ConfigContext["config"]> = {
 };
 
 export default function ({ config }: ConfigContext): ExpoConfig {
-  const privateLabelSchema = process.env.PRIVATE_LABEL_SCHEMA ?? "first";
+  const privateLabelSchema = process.env.EXPO_PRIVATE_LABEL_SCHEMA ?? "first";
 
   const overrides =
     privateLabelSchema in configs ? configs[privateLabelSchema] : {};

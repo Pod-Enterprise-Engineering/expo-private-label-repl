@@ -21,7 +21,7 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.pod-enterprise-engineering.expoprivatelabelrepl"
+      "package": "com.pod_enterprise_engineering.expoprivatelabelrepl"
     },
     "web": {
       "output": "static",

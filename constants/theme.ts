@@ -5,6 +5,8 @@
 
 import { Platform } from 'react-native';
 
+console.log(process.env.EXPO_PRIVATE_LABEL_SCHEMA);
+
 const tintColorLight = '#0a7ea4';
 const tintColorDark = '#fff';
 
